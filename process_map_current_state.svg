@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="620" viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" font-family="Calibri, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1200" height="620" fill="#F8F9FB"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="1200" height="44" fill="#1B3A6B"/>
+  <text x="600" y="28" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Customs Documentation Completeness Check — Current State (As-Is) Process Map</text>
+
+  <!-- Swim lane labels -->
+  <rect x="0" y="44" width="120" height="576" fill="#2E5B9A"/>
+  <text transform="translate(30,332) rotate(-90)" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Operations</text>
+  <text transform="translate(30,332) rotate(-90)" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Operations</text>
+
+  <!-- Swim lane 1: Operations Team -->
+  <rect x="120" y="44" width="1080" height="192" fill="#EEF2F8" stroke="#C5D0E0" stroke-width="1"/>
+  <text x="130" y="64" fill="#1B3A6B" font-size="11" font-weight="bold">Operations Team</text>
+
+  <!-- Swim lane 2: System / CargoWise -->
+  <rect x="120" y="236" width="1080" height="192" fill="#F5F7FA" stroke="#C5D0E0" stroke-width="1"/>
+  <text x="130" y="256" fill="#1B3A6B" font-size="11" font-weight="bold">CargoWise One</text>
+
+  <!-- Swim lane 3: External -->
+  <rect x="120" y="428" width="1080" height="192" fill="#EEF2F8" stroke="#C5D0E0" stroke-width="1"/>
+  <text x="130" y="448" fill="#1B3A6B" font-size="11" font-weight="bold">Broker / Customs Authority</text>
+
+  <!-- ── LANE 1: Operations Team ── -->
+
+  <!-- Start event -->
+  <circle cx="190" cy="140" r="22" fill="#1B3A6B" stroke="#1B3A6B" stroke-width="2"/>
+  <circle cx="190" cy="140" r="16" fill="none" stroke="white" stroke-width="2"/>
+  <text x="190" y="185" text-anchor="middle" fill="#333" font-size="10">Shipment</text>
+  <text x="190" y="197" text-anchor="middle" fill="#333" font-size="10">Booking</text>
+  <text x="190" y="209" text-anchor="middle" fill="#333" font-size="10">Confirmed</text>
+
+  <!-- Task 1: Retrieve shipment -->
+  <rect x="240" y="110" width="130" height="60" rx="8" fill="white" stroke="#2E5B9A" stroke-width="2"/>
+  <text x="305" y="135" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Retrieve Shipment</text>
+  <text x="305" y="149" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Record</text>
+  <text x="305" y="163" text-anchor="middle" fill="#555" font-size="9">Manual — operator</text>
+
+  <!-- Task 2: Check documents -->
+  <rect x="400" y="110" width="130" height="60" rx="8" fill="white" stroke="#2E5B9A" stroke-width="2"/>
+  <text x="465" y="135" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Check Document</text>
+  <text x="465" y="149" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Completeness</text>
+  <text x="465" y="163" text-anchor="middle" fill="#555" font-size="9">Manual — memory based</text>
+
+  <!-- Gateway 1: Complete? -->
+  <polygon points="575,140 610,110 645,140 610,170" fill="#FFF3CD" stroke="#E6A800" stroke-width="2"/>
+  <text x="610" y="137" text-anchor="middle" fill="#854F0B" font-size="9" font-weight="bold">All Docs</text>
+  <text x="610" y="149" text-anchor="middle" fill="#854F0B" font-size="9" font-weight="bold">Present?</text>
+
+  <!-- No path — chase docs -->
+  <rect x="660" y="68" width="130" height="60" rx="8" fill="#FFF0F0" stroke="#E24B4A" stroke-width="2"/>
+  <text x="725" y="90" text-anchor="middle" fill="#A32D2D" font-size="10" font-weight="bold">Chase Missing</text>
+  <text x="725" y="104" text-anchor="middle" fill="#A32D2D" font-size="10" font-weight="bold">Documents</text>
+  <text x="725" y="118" text-anchor="middle" fill="#555" font-size="9">Email / phone — manual</text>
+  <text x="725" y="60" text-anchor="middle" fill="#E24B4A" font-size="9" font-weight="bold">⚠ No — ~35% of shipments</text>
+
+  <!-- Loop back arrow from chase to check -->
+  <path d="M725,68 Q725,30 465,30 Q430,30 430,110" fill="none" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowRed)"/>
+
+  <!-- Yes path -->
+  <text x="660" y="135" fill="#27500A" font-size="9" font-weight="bold">Yes</text>
+
+  <!-- Task 3: Assemble package -->
+  <rect x="660" y="110" width="130" height="60" rx="8" fill="white" stroke="#2E5B9A" stroke-width="2"/>
+  <text x="725" y="135" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Assemble Doc</text>
+  <text x="725" y="149" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Package</text>
+  <text x="725" y="163" text-anchor="middle" fill="#555" font-size="9">Manual — operator</text>
+
+  <!-- Task 4: Submit -->
+  <rect x="820" y="110" width="130" height="60" rx="8" fill="white" stroke="#2E5B9A" stroke-width="2"/>
+  <text x="885" y="135" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Submit to Broker</text>
+  <text x="885" y="149" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">via Email</text>
+  <text x="885" y="163" text-anchor="middle" fill="#555" font-size="9">Manual — no validation</text>
+
+  <!-- ── LANE 2: CargoWise ── -->
+
+  <!-- Task: Update milestone manually -->
+  <rect x="820" y="266" width="130" height="60" rx="8" fill="white" stroke="#2E5B9A" stroke-width="2"/>
+  <text x="885" y="288" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Update Shipment</text>
+  <text x="885" y="302" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Milestone</text>
+  <text x="885" y="316" text-anchor="middle" fill="#555" font-size="9">Manual — often delayed</text>
+
+  <!-- ── LANE 3: External ── -->
+
+  <!-- Task: Broker receives -->
+  <rect x="980" y="458" width="130" height="60" rx="8" fill="white" stroke="#2E5B9A" stroke-width="2"/>
+  <text x="1045" y="480" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">Broker Receives</text>
+  <text x="1045" y="494" text-anchor="middle" fill="#1B3A6B" font-size="10" font-weight="bold">and Reviews Docs</text>
+  <text x="1045" y="508" text-anchor="middle" fill="#555" font-size="9">External party</text>
+
+  <!-- Gateway 2: Docs OK? -->
+  <polygon points="850,488 885,458 920,488 885,518" fill="#FFF3CD" stroke="#E6A800" stroke-width="2"/>
+  <text x="885" y="485" text-anchor="middle" fill="#854F0B" font-size="9" font-weight="bold">Docs</text>
+  <text x="885" y="497" text-anchor="middle" fill="#854F0B" font-size="9" font-weight="bold">OK?</text>
+
+  <!-- No — error feedback -->
+  <rect x="660" y="458" width="130" height="60" rx="8" fill="#FFF0F0" stroke="#E24B4A" stroke-width="2"/>
+  <text x="725" y="480" text-anchor="middle" fill="#A32D2D" font-size="10" font-weight="bold">Return Error to</text>
+  <text x="725" y="494" text-anchor="middle" fill="#A32D2D" font-size="10" font-weight="bold">Operations Team</text>
+  <text x="725" y="508" text-anchor="middle" fill="#555" font-size="9">~12% of shipments</text>
+
+  <!-- Yes — clearance -->
+  <rect x="980" y="548" width="130" height="50" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="2"/>
+  <text x="1045" y="570" text-anchor="middle" fill="#27500A" font-size="10" font-weight="bold">Customs</text>
+  <text x="1045" y="584" text-anchor="middle" fill="#27500A" font-size="10" font-weight="bold">Clearance Granted</text>
+
+  <!-- End event -->
+  <circle cx="1150" cy="573" r="22" fill="white" stroke="#1B3A6B" stroke-width="4"/>
+  <circle cx="1150" cy="573" r="14" fill="#1B3A6B"/>
+  <text x="1150" y="610" text-anchor="middle" fill="#333" font-size="10">End</text>
+
+  <!-- ── PAIN POINT ANNOTATIONS ── -->
+  <rect x="380" y="185" width="170" height="38" rx="4" fill="#FFF3CD" stroke="#E6A800" stroke-width="1"/>
+  <text x="465" y="200" text-anchor="middle" fill="#854F0B" font-size="9" font-weight="bold">⚠ No checklist enforced</text>
+  <text x="465" y="214" text-anchor="middle" fill="#854F0B" font-size="9">Relies on operator memory</text>
+
+  <rect x="800" y="185" width="170" height="38" rx="4" fill="#FFF3CD" stroke="#E6A800" stroke-width="1"/>
+  <text x="885" y="200" text-anchor="middle" fill="#854F0B" font-size="9" font-weight="bold">⚠ No pre-submission check</text>
+  <text x="885" y="214" text-anchor="middle" fill="#854F0B" font-size="9">Errors reach external parties</text>
+
+  <!-- ── ARROWS ── -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2E5B9A"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#E24B4A"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3B6D11"/>
+    </marker>
+  </defs>
+
+  <line x1="212" y1="140" x2="238" y2="140" stroke="#2E5B9A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="370" y1="140" x2="398" y2="140" stroke="#2E5B9A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="530" y1="140" x2="573" y2="140" stroke="#2E5B9A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="610" y1="110" x2="725" y2="98" stroke="#E24B4A" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+  <line x1="645" y1="140" x2="658" y2="140" stroke="#2E5B9A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="790" y1="140" x2="818" y2="140" stroke="#2E5B9A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="885" y1="170" x2="885" y2="264" stroke="#2E5B9A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="885" y1="170" x2="1045" y2="456" stroke="#2E5B9A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="978" y1="488" x2="922" y2="488" stroke="#2E5B9A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="850" y1="488" x2="792" y2="488" stroke="#E24B4A" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+  <text x="818" y="482" fill="#E24B4A" font-size="9" font-weight="bold">No</text>
+  <line x1="885" y1="518" x2="1043" y2="548" stroke="#3B6D11" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <text x="900" y="540" fill="#27500A" font-size="9" font-weight="bold">Yes</text>
+  <line x1="1110" y1="573" x2="1126" y2="573" stroke="#1B3A6B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Legend -->
+  <rect x="122" y="590" width="958" height="24" fill="#E8ECF4" rx="4"/>
+  <rect x="140" y="597" width="14" height="10" rx="2" fill="white" stroke="#2E5B9A" stroke-width="1.5"/>
+  <text x="160" y="607" fill="#333" font-size="9">Manual Task</text>
+  <rect x="240" y="597" width="14" height="10" rx="2" fill="#FFF0F0" stroke="#E24B4A" stroke-width="1.5"/>
+  <text x="260" y="607" fill="#333" font-size="9">Error / Rework</text>
+  <polygon points="360,607 370,597 380,607 370,617" fill="#FFF3CD" stroke="#E6A800" stroke-width="1.5"/>
+  <text x="388" y="607" fill="#333" font-size="9">Decision Gateway</text>
+  <rect x="490" y="597" width="14" height="10" rx="2" fill="#EAF3DE" stroke="#3B6D11" stroke-width="1.5"/>
+  <text x="510" y="607" fill="#333" font-size="9">Success Outcome</text>
+  <text x="700" y="607" fill="#854F0B" font-size="9">⚠ Pain Point identified through gap analysis (refer BRD v1.0)</text>
+</svg>
