@@ -1,7 +1,7 @@
 # RPA Business Case — Customs Documentation Completeness Check Automation
 
 **Portfolio Project — N M Ziyaf**
-Supply Chain Business Analyst, Automation Anywhere Certified, UiPath Certified, Six Sigma Black Belt
+Supply Chain Business Analyst
 
 ---
 
@@ -81,5 +81,7 @@ RPA business case development and ROI calculation. Process analysis and automati
 ## Author
 
 N M Ziyaf
+
 Supply Chain Business Analyst, Sydney NSW
+
 linkedin.com/in/ziyafmohamed
