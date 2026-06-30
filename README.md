@@ -60,9 +60,9 @@ RPA_Business_Case_Customs_Automation_v1.0.docx — Full business case in Word fo
 
 RPA_Business_Case_Customs_Automation_v1.0.pdf — Full business case in PDF format
 
-process_map_current_state.svg — Current state BPMN process map with pain points annotated
+process_map_current_state.png — Current state BPMN process map with pain points annotated
 
-process_map_future_state.svg — Future state BPMN process map showing RPA automation touchpoints
+process_map_future_state.png — Future state BPMN process map showing RPA automation touchpoints
 
 ---
 
